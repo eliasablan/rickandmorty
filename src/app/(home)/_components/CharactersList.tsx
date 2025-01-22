@@ -91,7 +91,7 @@ function Modal({
         <h3 className="font-bold text-lg">
           Episodios donde aparece {character?.name}
         </h3>
-        <ul className="py-2 space-y-2 grid">
+        <ul className="py-2 space-y-2 grid grid-cols-3 items-baseline">
           {character?.episode.map((episodeUrl, index) => (
             <li key={index}>
               <a href={episodeUrl} target="_blank" rel="noopener noreferrer">
