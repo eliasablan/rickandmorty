@@ -36,23 +36,17 @@ export default function LocationsList() {
 
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-      {data.map((location) => {
-        console.log({
-          location: location.name,
-          personajes: location.residents,
-        });
-        return (
-          <div
-            className="card border bg-base-100 shadow-xl"
-            key={location.id}
-            onClick={() => openModal(location)}
-          >
-            <div className="card-body justify-between">
-              <h2 className="card-title">{location.name}</h2>
-            </div>
+      {data.map((location) => (
+        <div
+          className="card border bg-base-100 shadow-xl cursor-pointer"
+          key={location.id}
+          onClick={() => openModal(location)}
+        >
+          <div className="card-body justify-between">
+            <h2 className="card-title">{location.name}</h2>
           </div>
-        );
-      })}
+        </div>
+      ))}
       {isModalOpen && (
         <Modal location={selectedLocation} closeModal={closeModal} />
       )}
