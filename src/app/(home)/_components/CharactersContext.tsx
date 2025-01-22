@@ -11,7 +11,7 @@ import {
 } from "react";
 import axios from "axios";
 
-type Character = {
+export type Character = {
   id: number;
   name: string;
   status: "Alive" | "Dead" | "unknown";

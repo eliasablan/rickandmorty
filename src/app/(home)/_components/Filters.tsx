@@ -26,8 +26,8 @@ export default function Filters() {
   };
 
   return (
-    <div className="flex w-full justify-between">
-      <div className="flex flex-row gap-4 items-center">
+    <div className="flex flex-col md:flex-row  gap-4 w-full justify-between">
+      <div className="flex gap-4 items-center">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn">
             Estado de los personajes
